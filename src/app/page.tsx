@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Github, Linkedin, Instagram } from 'lucide-react'
+import Link from "next/link";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,8 +12,9 @@ export default function Home() {
         </section>
 
         <p className="intro">
-          Passionnée par le développement web et la création d'expériences numériques uniques.
-          Je transforme vos idées en réalité avec élégance et innovation.
+          Passionnée par le développement web et la création d&apos;expériences
+          numériques uniques. Je transforme vos idées en réalité avec élégance
+          et innovation.
         </p>
 
         <div className="tech-stack">
@@ -25,19 +26,31 @@ export default function Home() {
         </div>
 
         <div className="social">
-          <Link href="https://linkedin.com" target="_blank" className="social-link linkedin">
+          <Link
+            href="https://linkedin.com"
+            target="_blank"
+            className="social-link linkedin"
+          >
             <Linkedin />
           </Link>
-          
-          <Link href="https://instagram.com" target="_blank" className="social-link instagram">
+
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            className="social-link instagram"
+          >
             <Instagram />
           </Link>
-          
-          <Link href="https://github.com" target="_blank" className="social-link github">
+
+          <Link
+            href="https://github.com"
+            target="_blank"
+            className="social-link github"
+          >
             <Github />
           </Link>
         </div>
       </div>
     </main>
-  )
+  );
 }
