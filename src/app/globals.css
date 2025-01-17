@@ -1,109 +1,164 @@
-.portfolio-container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: #ffffff;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #FF3366;
+  --secondary: #6B66FF;
+  --text: #1A1A1A;
+  --background: #FFFFFF;
 }
 
-.content-wrapper {
-  max-width: 800px;
-  width: 100%;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.main-title {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  color: #4ecdc4;
-  margin-bottom: 2rem;
-}
-
-.description {
-  font-size: 1.1rem;
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text);
   line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #e0e0e0;
 }
 
-.skills-section {
-  margin-bottom: 2rem;
+.bg-gradient {
+  background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
 }
 
-.skills-section h3 {
-  color: #4ecdc4;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-family: 'Dela Gothic One', cursive;
+  font-size: 5rem;
+  color: var(--primary);
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
-.skills-list {
+.title-bar {
+  height: 4px;
+  width: 80px;
+  background: var(--secondary);
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.tech-stack {
   display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
-  gap: 0.8rem;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
-.skill-tag {
-  background: rgba(78, 205, 196, 0.1);
-  border: 1px solid #4ecdc4;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.social-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.tech-item {
   padding: 0.8rem 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 100px;
+  font-weight: 500;
+  color: var(--primary);
   transition: all 0.3s ease;
-  text-decoration: none;
-  color: #ffffff;
 }
 
-.social-button:hover {
-  background: rgba(78, 205, 196, 0.2);
+.tech-item:hover {
+  background: var(--primary);
+  color: white;
   transform: translateY(-2px);
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
+.social {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.social-link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.social-link.linkedin:hover svg {
+  color: #0077B5;
+}
+
+.social-link.instagram:hover svg {
+  color: #E4405F;
+}
+
+.social-link.github:hover svg {
+  color: #333;
 }
 
 @media (max-width: 768px) {
-  .main-title {
-    font-size: 2.5rem;
+  .container {
+    padding: 2rem 1rem;
   }
   
-  .subtitle {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero h2 {
     font-size: 1.2rem;
   }
   
-  .social-links {
-    flex-direction: column;
-    align-items: center;
+  .intro {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
   
-  .social-button {
-    width: 200px;
+  .tech-stack {
+    gap: 0.8rem;
+  }
+  
+  .tech-item {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .social-link {
+    width: 50px;
+    height: 50px;
   }
 }
