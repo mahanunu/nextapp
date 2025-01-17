@@ -1,95 +1,58 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link'
+import { Github, Linkedin, Instagram } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="portfolio-container">
+      <div className="content-wrapper">
+        <h1 className="main-title">Mahalia</h1>
+        <h2 className="subtitle">Développeuse Web</h2>
+        
+        <p className="description">
+          Bienvenue sur mon portfolio. Je suis une développeuse web passionnée
+          par la création d'expériences numériques exceptionnelles.
+        </p>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className="skills-section">
+          <h3>Compétences</h3>
+          <div className="skills-list">
+            <span className="skill-tag">React</span>
+            <span className="skill-tag">Next.js</span>
+            <span className="skill-tag">TypeScript</span>
+            <span className="skill-tag">Node.js</span>
+            <span className="skill-tag">CSS</span>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        <div className="social-links">
+          <Link 
+            href="https://linkedin.com" 
+            target="_blank"
+            className="social-button"
+          >
+            <Linkedin className="icon" />
+            <span>LinkedIn</span>
+          </Link>
+
+          <Link 
+            href="https://instagram.com" 
+            target="_blank"
+            className="social-button"
+          >
+            <Instagram className="icon" />
+            <span>Instagram</span>
+          </Link>
+
+          <Link 
+            href="https://github.com" 
+            target="_blank"
+            className="social-button"
+          >
+            <Github className="icon" />
+            <span>GitHub</span>
+          </Link>
+        </div>
+      </div>
+    </main>
+  )
 }
